@@ -154,7 +154,9 @@ if is_play $BUILD_DIR ; then
     rm -rf $BUILD_DIR/target/streams
     rm -rf $BUILD_DIR/target/resolution-cache
   fi
+  echo "-----> Dropping module modules $BUILD_DIR/modules from the slug"
   for MODULE_DIR in $BUILD_DIR/modules; do
+    echo "--------> $MODULE_DIR/target"
     if [ -d $MODULE_DIR/target ] ; then
       echo "-----> Dropping module $MODULE_DIR target from the slug"
       rm -rf $MODULE_DIR/target
